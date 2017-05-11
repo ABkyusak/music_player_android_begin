@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
 
     <TextView
@@ -13,12 +14,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/ply"
+        android:layout_below="@+id/txtV"
         android:text="@string/play"
         />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/p"
+        android:layout_below="@+id/ply"
         android:text="@string/pause"
         />
     <Button
@@ -26,8 +29,57 @@
         android:layout_height="wrap_content"
         android:id="@+id/r"
         android:text="@string/resume"
+        android:layout_below="@+id/p"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:text="@string/next"
+        android:layout_below="@+id/r"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/prev"
+        android:text="@string/previous"
+        android:layout_below="@+id/next"
+        />
+
+    <SeekBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:layout_below="@+id/prev"
+        android:layout_alignLeft="@+id/prev"
+        android:layout_alignStart="@+id/prev"
+        android:layout_alignRight="@+id/prev"
+        android:layout_alignEnd="@+id/prev"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Start"
+        android:id="@+id/textView2"
+        android:layout_below="@+id/seekBar"
+
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="end"
+        android:id="@+id/textView3"
+
+        android:layout_below="@+id/textView2"
         />
 
 
 
-</LinearLayout>
+
+</RelativeLayout>

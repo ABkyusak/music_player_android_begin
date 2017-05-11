@@ -1,7 +1,13 @@
-package com.example.kumarabhi.customlistviewv0;
+package com.example.kabhishek1.custom_listplusfetchv0;
 
 /**
- * Created by kumar abhi on 4/17/2017.
+ * Created by k.abhishek1 on 17-04-2017.
+ */
+
+
+
+/**
+ * Created by k.abhishek1 on 12-04-2017.
  */
 
 public class AudioModel {
@@ -9,6 +15,8 @@ public class AudioModel {
     String aName;
     String aAlbum;
     String aArtist;
+    String albumArt;
+     String Albumid;
 
     public String getaPath() {
         return aPath;
@@ -34,11 +42,35 @@ public class AudioModel {
         this.aAlbum = aAlbum;
     }
 
+
+
+
+    public void setaAlbumId( String Albumid) {
+      this.Albumid = Albumid;
+
+    }
+
+    public String getaAlbumId() {
+        return Albumid;
+    }
+
+
+
     public String getaArtist() {
         return aArtist;
     }
 
     public void setaArtist(String aArtist) {
         this.aArtist = aArtist;
+    }
+
+    public void setAlbumArt(String albumArt) {
+        this.albumArt = albumArt;
+    }
+
+    public String getAlbumArt() {
+//        this.albumArt = albumArt;
+
+        return albumArt;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.kumarabhi.customlistviewv0;
+package com.example.kabhishek1.custom_listplusfetchv0;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.kumarabhi.customlistviewv0", appContext.getPackageName());
+        assertEquals("com.example.kabhishek1.custom_listplusfetchv0", appContext.getPackageName());
     }
 }

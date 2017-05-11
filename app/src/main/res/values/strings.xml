@@ -1,7 +1,14 @@
 <resources>
-    <string name="app_name">customListViewV0</string>
+    <string name="app_name">Rock Ur Drums</string>
     <string name="play">Play</string>
     <string name="pause">Pause</string>
     <string name="resume">Resume</string>
-
+    <string name="next">Next Song</string>
+    <string name="previous">prev Song</string>
+    <string name="app_na">MUSIC</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="search">Search</string>
+    <string name="share">Share</string>
+    <string name="addToPlay">Add to PlayList</string>
+    <string name="about">About</string>
 </resources>
