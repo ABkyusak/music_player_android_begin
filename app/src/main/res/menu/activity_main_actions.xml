@@ -3,20 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.kabhishek1.actionbar.MainActivity" >
 
-    <item
-        android:id="@+id/search"
-        android:orderInCategory="100"
-        android:title="@string/search"
-        app:showAsAction="always"
-        android:icon="@drawable/search"
 
-        />
 
     <item
-        android:id="@+id/aTP"
+        android:id="@+id/ShowAllPlayList"
         android:orderInCategory="100"
-        android:title="@string/addToPlay"
+        android:title="@string/showAllPlay"
         app:showAsAction="never"/>
+
     <item
         android:id="@+id/about"
         android:orderInCategory="100"

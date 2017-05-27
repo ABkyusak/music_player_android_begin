@@ -1,85 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/linearLayoutPlayer"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="@drawable/back4"
+    android:gravity="center"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#70000000"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/txtV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:gravity="center_horizontal"
+        android:marqueeRepeatLimit="-1"
+        android:paddingLeft="5dp"
+        android:paddingTop="20dp"
+        android:singleLine="true"
+        android:text="HeadLine: Banglawash To be Continued"
+        android:textColor="@color/white"
+        android:textSize="30dp" />
+
+
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/textAlbumArtist"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/txtV"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/ply"
-        android:layout_below="@+id/txtV"
-        android:text="@string/play"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/p"
-        android:layout_below="@+id/ply"
-        android:text="@string/pause"
-        />
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/r"
-        android:text="@string/resume"
-        android:layout_below="@+id/p"
-        />
+        android:ellipsize="marquee"
+        android:gravity="center_horizontal"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
 
-    <Button
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/textComposer"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/next"
-        android:text="@string/next"
-        android:layout_below="@+id/r"
-        />
-    <Button
-        android:layout_width="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingLeft="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="15dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:background="@android:color/darker_gray" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <com.example.kabhishek1.musicv1.ShadowImageView
+
+            android:id="@+id/image_view_album"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/default_album_art"
+            android:layout_centerInParent="true"
+            />
+    </RelativeLayout>
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="@android:color/darker_gray" />
+
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center|bottom"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/prev"
-        android:text="@string/previous"
-        android:layout_below="@+id/next"
-        />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/app_name"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="@string/app_name"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
 
     <SeekBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+
         android:id="@+id/seekBar"
-        android:layout_below="@+id/prev"
-        android:layout_alignLeft="@+id/prev"
-        android:layout_alignStart="@+id/prev"
-        android:layout_alignRight="@+id/prev"
-        android:layout_alignEnd="@+id/prev"
-
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="Start"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/seekBar"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
 
         />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="end"
-        android:id="@+id/textView3"
-
-        android:layout_below="@+id/textView2"
-        />
-
-
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/dgrey"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
 
 
-</RelativeLayout>
+
+        <Button
+            android:id="@+id/prev"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_width"
+            android:layout_margin="10dp"
+            android:background="@drawable/prev" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="@dimen/button_width"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/p"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_width"
+            android:layout_margin="10dp"
+            android:background="@drawable/pause"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/ply"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="20dp"
+            android:layout_weight="0.04" />
+
+        <View
+            android:layout_width="3dp"
+            android:layout_height="@dimen/button_width"
+            android:background="@android:color/darker_gray" />
+
+        <Button
+            android:id="@+id/next"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_width"
+            android:layout_margin="10dp"
+            android:background="@drawable/next" />
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+</LinearLayout>
+
+
